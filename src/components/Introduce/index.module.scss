@@ -1,0 +1,27 @@
+.container{
+    margin: 0 auto 104px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    .left {
+        width: 447px;
+        margin-right: 61px;
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .title{
+            font-size: 40px;
+            font-weight: bold;
+            color: #FFFFFF;
+            margin-bottom: 40px;
+        }
+        .subtitle{
+            color: #7F7F7F;
+            line-height: 23px;
+            font-size: 19px;
+        }
+    }
+    
+}

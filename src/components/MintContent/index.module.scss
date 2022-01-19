@@ -1,0 +1,85 @@
+.container {
+    width: 1200px;
+    margin:0 auto;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .rightContent {
+        width: 470px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        .title {
+             color: #7F7F7F;
+             font-size: 20px;
+             font-family: HelveticaNeue;
+             margin-bottom: 20px;
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #3D3D3D;
+            font-size: 22px;
+            color: white;
+            padding: 26px 0;
+            width:100%;
+            .right{
+                display: flex;
+                align-items: center;
+                .num{
+                    display: flex;
+                    align-items: center;
+                    .operateBtn{
+                        cursor: pointer;
+                    }
+                }
+                .gradientBtn {
+                    cursor: pointer;
+                    background:linear-gradient(316deg, #C383FF 0%, #64FFDA 100%);
+                    border-radius: 50px;
+                    width:124px;
+                    height: 44px;
+                    position: relative;
+                    text-align: center;
+                    line-height: 44px;
+                    margin-left: 30px;
+                    &::before{
+                        content:'MAX';
+                        background-image: linear-gradient(316deg, #C383FF 0%, #64FFDA 100%);
+                        position: relative;
+                        z-index: 10;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                    &::after {
+                        content:'';
+                        position: absolute;
+                        inset:2px;
+                        border-radius: 50px;
+                        background:black
+                    }
+    
+    
+                }
+                
+            }
+           
+        }
+        .btn{
+            width: 400px;
+            height: 53px;
+            background: #64FFDA;
+            border-radius: 32px;
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            line-height: 53px;
+            margin-top: 59px;
+            cursor: pointer;
+        }
+    }
+
+}

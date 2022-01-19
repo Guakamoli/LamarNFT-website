@@ -1,0 +1,23 @@
+//.item {
+//    width: 314px !important;
+//    .img{
+//        width: 100%;
+//    }
+//}
+
+
+.container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom:123px;
+    .slide {
+        display:flex;
+        .img {
+            width: 314px;
+            margin-left: 23px;
+            &:last-child{
+                padding-right: 23px;
+            }
+        }
+    }
+}
