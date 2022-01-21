@@ -28,7 +28,7 @@ export default function MintContent(){
                     <div className={styles.left}>Total amount</div>
                     <div className={styles.right}>0.0777 ETH</div>
                 </div>
-                <div className={styles.btn}>MINT NOW</div>
+                <div className={styles.btn}>Coming soon</div>
             </div>
         </div>
     )

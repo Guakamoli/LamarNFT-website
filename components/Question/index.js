@@ -3,17 +3,17 @@ import styles from './index.module.scss';
 const Question = function () {
     const [list, setList] = useState([{
         showAnswer: false,
-        question: "How do I join Lamar's MetaverseI？",
-        answer: "On the main page of the website, find the discord button and join the server. Please keep in mind that you need to have a verified Discord account in order to be accepted into the community. "
+        question: `How do I join Lamar's "Metaverse？`,
+        answer: "On the top of the page, find the discord button and join the server. Please keep in mind that you need to have a verified Discord account in order to be accepted into the community. "
     }, {
         showAnswer: false,
         question: "Is this the real Lamar Odom？",
-        answer: "Yes, this NFT project came directly from Lamar and he is personally involved in designing and creating these collections. Please check his instagram if you still dont believe us!"
+        answer: "Absolutely! This project was created by Lamar Odom himself and he is personally involved in designing and creating these collections. Please check  his instagram if you still dont believe us!"
 
     }, {
         showAnswer: false,
-        question: "How many NFT will be available？",
-        answer: "For Season 1, there will be a collection of 7,777 NFTs with 7 of them super rare signed by Lamar Odom. "
+        question: "How many NFTs will be available?",
+        answer: "For Season 1, there will be a collection of 7,777 NFTs with 7 limited editions signed by Lamar Odom!"
 
     }, {
         showAnswer: false,
@@ -35,10 +35,6 @@ const Question = function () {
         showAnswer: false,
         question: "How long after minting will my NFT be available?",
         answer: "Torimi NFT has carefully planned roll outs and will make NFTs available 24 to 48 hours after minting."
-    }, {
-        showAnswer: false,
-        question: "Where can I find information on the giveaway and how do I get my prize?",
-        answer: "You can find all the giveaway information in the #giveaway as well as #announcements. Please contact our staff using ModMail if you are the winner of the giveaways. You can find more information on how to contact our staff in #support "
     }]);
     const showAnswer = (index) => {
         const newList = [...list]
@@ -47,15 +43,15 @@ const Question = function () {
     }
     return (
         <div className={styles.container}>
-            <div className={styles.title}>Frequently asked questions</div>
-            <div className={styles.gradientBtn}>MINT NOW</div>
+            <div className={styles.title}>Frequently Asked Questions</div>
+            <div className={styles.gradientBtn}>Coming soon</div>
             <div className={styles.line}></div>
             {
                 list.map((item, index) => {
                     return (
                         <div key={index}>
                             <div className={styles.question} style={item.showAnswer ? null : { marginBottom: '29px' }} onClick={() => showAnswer(index)}>
-                                <img src={item.showAnswer ? '/images/bt_shouqi.png' : '/images/bt_dakai.png'} />
+                                <img style={{width: '36px', height: '36px'}} src={item.showAnswer ? '/images/bt_shouqi.png' : '/images/bt_dakai.png'} />
                                 <div>{item.question}</div>
                             </div>
                             {

@@ -8,8 +8,9 @@ const Footer = function() {
                 </div>
                 <div className={styles.right}>
                     <div className={styles.btn}>DISCORD</div>
-                    <div className={styles.btn}>TWITTER</div>
+                    <div className={styles.btn} onClick={() => window.location.href='https://twitter.com/Torimi_NFT'}>TWITTER</div>
                     <div className={styles.btn}>OPENSEA</div>
+                    <div className={styles.btn} onClick={() => window.location.href='https://www.instagram.com/torimi_nft'}>INSTAGRAM</div>
                 </div>
             </div>
         </div>

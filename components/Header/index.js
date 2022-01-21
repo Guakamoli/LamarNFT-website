@@ -1,7 +1,5 @@
 import styles from './index.module.scss';
-import { useRouter } from 'next/router'
 const Header = function() {
-    const router = useRouter()
     return (
         <div className={styles.header}>
             <div className={styles.headerContent}>
@@ -10,11 +8,11 @@ const Header = function() {
                 </div>
                 <div className={styles.right}>
                     <div>Discord</div>
-                    <div>Twitter</div>
+                    <div onClick={() => window.location.href='https://twitter.com/Torimi_NFT'}>Twitter</div>
                     <div>OpenSea</div>
-                    <div>Learn more</div>
+                    <div onClick={() => window.location.href='https://www.instagram.com/torimi_nft'}>Instagram</div>
                     <div className={styles.gradientBtn}>
-                        <img src='/images/bt_mint.png' onClick={() => router.push('/mint')}/>
+                        <img src='/images/bt_mint.png'/>
                     </div>
                 </div>
             </div>
