@@ -3,7 +3,7 @@ import styles from './index.module.scss';
 const Question = function () {
     const [list, setList] = useState([{
         showAnswer: false,
-        question: `How do I join Lamar's "Metaverse？`,
+        question: `How do I join Lamar's Metaverse？`,
         answer: "On the top of the page, find the discord button and join the server. Please keep in mind that you need to have a verified Discord account in order to be accepted into the community. "
     }, {
         showAnswer: false,
