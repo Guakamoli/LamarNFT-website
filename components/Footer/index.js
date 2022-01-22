@@ -4,7 +4,7 @@ const Footer = function() {
         <div className={styles.footer}>
             <div className={styles.content}>
                 <div className={styles.left}>
-                    Copyright © 2021. All rights reserved Torimi NFT. 
+                    Copyright © {new Date().getFullYear()} All rights reserved Torimi NFT. 
                 </div>
                 <div className={styles.right}>
                     <div className={styles.btn}>DISCORD</div>
