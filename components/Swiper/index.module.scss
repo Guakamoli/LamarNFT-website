@@ -13,7 +13,8 @@
     .slide {
         display:flex;
         .img {
-            width: 314px;
+            height: 333px;
+            aspect-ratio: auto 314/333;
             margin-left: 23px;
             &:last-child{
                 padding-right: 23px;

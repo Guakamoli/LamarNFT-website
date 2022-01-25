@@ -4,18 +4,20 @@
     display: flex;
     justify-content: space-between;
     .left {
-        width: 447px;
         margin-right: 61px;
+        height:630px;
+        aspect-ratio: auto 448/630;
     }
     .right{
         display: flex;
+        width:690px;
         flex-direction: column;
+        flex:1;
         justify-content: space-between;
         .title{
             font-size: 40px;
             font-weight: bold;
             color: #FFFFFF;
-            margin-bottom: 40px;
         }
         .subtitle{
             color: #7F7F7F;

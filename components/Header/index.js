@@ -7,7 +7,7 @@ const Header = function() {
                     <img src='/images/logo.png' className={styles.imgStyle} />
                 </div>
                 <div className={styles.right}>
-                    <div>Discord</div>
+                    <div onClick={() => window.location.href='https://discord.gg/crGTv3z8aH'}>Discord</div>
                     <div onClick={() => window.location.href='https://twitter.com/Torimi_NFT'}>Twitter</div>
                     <div>OpenSea</div>
                     <div onClick={() => window.location.href='https://www.instagram.com/torimi_nft'}>Instagram</div>
