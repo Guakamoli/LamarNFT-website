@@ -39,7 +39,7 @@ const Roadmap = () => {
                             <div className={styles.text}>
                                 <div style={{fontSize:'20px'}}>
                                 Rise from the Ashes - Official Sale<br/>
-                                <div style={{fontWeight:'normal',marginTop:'15px'}}>Official launch on Torimi NFT  </div>
+                                <div style={{fontWeight:'normal',marginTop:'15px'}}>Official launch on Lamar Odom's Metaverse!   </div>
                                 </div>
                             </div>
                         </div>
@@ -50,9 +50,9 @@ const Roadmap = () => {
                             <img src='/images/bg_kuang_4.png' style={{width: '516px'}}/>
                             <div className={styles.text}>
                                 <div>
-                                Donate to charity publicly and Lamar live streaming on Discord to meet all Lamar NFT holders. Lamar will also announce the winner for the exclusive NFT and session 2 sneakpeak. 
-                                <div style={{marginTop:'22px'}}>Exclusive NFT Design Owner: Have a 5 min video call with Lamar<br/>
-Pricing: Official launch : 0.0777 ETH. </div>
+                                Donate to charity publicly and Lamar live streaming on Discord to meet all Lamar NFT holders. Lamar will also announce the winners for the exclusive NFT and session 2 sneakpeak. 
+                                <div style={{marginTop:'22px', fontWeight: 400}}>Exclusive NFT Design Owner: <br/>Have a 5 min video call with Lamar<br/>
+Pricing:<br/> Official launch : 0.0777 ETH. </div>
                                 </div>
                             </div>
                         </div>

@@ -4,7 +4,7 @@ const Footer = function() {
         <div className={styles.footer}>
             <div className={styles.content}>
                 <div className={styles.left}>
-                    Copyright © {new Date().getFullYear()} All rights reserved Torimi NFT. 
+                    Copyright © {new Date().getFullYear()}. All rights reserved Lamar Odom's Metaverse.
                 </div>
                 <div className={styles.right}>
                     <div className={styles.btn} onClick={() => window.location.href='https://discord.gg/crGTv3z8aH'}>DISCORD</div>

@@ -18,11 +18,11 @@ const Question = function () {
     }, {
         showAnswer: false,
         question: "Where can I buy LM NFTs？",
-        answer: "Torimi NFT- Torimi is an Online entertainment company based in Japan with offices in United States and China. Launched in 2021, Torimi's unique strategy has established it as the go to source for talents and KOLs to establish new ways to reach their audiences. We work with exceptional talents and bring our audience an emerging experience through unique creative projects."
+        answer: "LM NFTs can be bought on the official site of Lamar Odom's Metaverse."
     }, {
         showAnswer: false,
-        question: "Where can I find information on the raffle and how do I get my prize?",
-        answer: "We support MetaMask Wallet on Torimi NFT. For more information on how to set up and connect your wallet, please see the pinned message in #faq."
+        question: "What wallet does Lamar Odom's Metaverse support?",
+        answer: "We support MetaMask Wallet. For more information on how to set up and connect your wallet, please see the pinned message in #faq."
     }, {
         showAnswer: false,
         question: "How many LM NFT can I buy per wallet?",
@@ -35,7 +35,11 @@ const Question = function () {
         showAnswer: false,
         question: "How long after minting will my NFT be available?",
         answer: "Torimi NFT has carefully planned roll outs and will make NFTs available 24 to 48 hours after minting."
-    }]);
+    }, {
+        showAnswer: false,
+        question: "Where can I find information on the giveaway and how do I get my prize?",
+        answer: `You can find all the giveaway information in the #giveaway as well as #announcements. Please contact our staff using ModMail if you are the winner of the giveaways. \nYou can find more information on how to contact our staff in #support`
+    }, ]);
     const showAnswer = (index) => {
         const newList = [...list]
         newList[index].showAnswer = !newList[index].showAnswer;
@@ -44,7 +48,7 @@ const Question = function () {
     return (
         <div className={styles.container}>
             <div className={styles.title}>Frequently Asked Questions</div>
-            <div className={styles.gradientBtn}>Coming soon</div>
+            {/*<div className={styles.gradientBtn}>Coming soon</div>*/}
             <div className={styles.line}></div>
             {
                 list.map((item, index) => {
@@ -55,7 +59,7 @@ const Question = function () {
                                 <div>{item.question}</div>
                             </div>
                             {
-                                item.showAnswer ? <div className={styles.answer} style={{ margin: '29px 0 47px' }}>{item.answer}</div> : null
+                                item.showAnswer ? <div className={styles.answer} style={{ margin: '29px 0 47px', whiteSpace: 'pre-wrap' }}>{item.answer}</div> : null
                             }
                         </div>
                     )

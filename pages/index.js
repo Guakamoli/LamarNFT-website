@@ -15,7 +15,7 @@ const Index = () => {
             <Swiper />
             <Introduce />
             <Roadmap />
-            <Team />
+            {/*<Team />*/}
             <Question />
             <Footer />
         </div>
