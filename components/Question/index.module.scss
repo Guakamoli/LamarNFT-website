@@ -1,49 +1,51 @@
-.container{
-    padding-left: 120px;
-    margin: 76px auto 0px;
-    color: white;
+.questionBox{
     background-image: url(./bg_touxiangku.png);
     background-repeat: no-repeat;
     background-position: right bottom;
-    padding-bottom: 300px;
-    .title {
-        font-size: 46px;
-        font-weight: bold;
-        color: #FFFFFF;
-        margin-bottom: 36px;
-    }
-    .gradientBtn{
-        cursor: pointer;
-        background: #FFFFFF linear-gradient(328deg, #C383FF 0%, #64FFDA 100%);
-        width: 164px;
-        height: 53px;
-        border-radius: 32px;
-        text-align: center;
-        line-height: 53px;
-        color: black;
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 67px;
-    }
-    .line{
-        height: 1px;
-        margin-bottom: 67px;
-        width: 360px;
-        background: #3D3D3D;
-    }
-    .question{
-        display: flex;
-        align-items: center;
-        font-weight: 600;
-        font-size: 19px;
-        img {
-            margin-right: 13px;
+    .container{
+        width: 1200px;
+        margin: 76px auto 0px;
+        color: white;
+        padding-bottom: 300px;
+        .title {
+            font-size: 46px;
+            font-weight: bold;
+            color: #FFFFFF;
+            margin-bottom: 36px;
         }
-    }
-    .answer{
-        width: 690px;
-        font-size: 19px;
-        color: #7F7F7F;
-        line-height: 23px;
+        .gradientBtn{
+            cursor: pointer;
+            background: #FFFFFF linear-gradient(328deg, #C383FF 0%, #64FFDA 100%);
+            width: 164px;
+            height: 53px;
+            border-radius: 32px;
+            text-align: center;
+            line-height: 53px;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 67px;
+        }
+        .line{
+            height: 1px;
+            margin-bottom: 67px;
+            width: 360px;
+            background: #3D3D3D;
+        }
+        .question{
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 19px;
+            img {
+                margin-right: 13px;
+            }
+        }
+        .answer{
+            width: 690px;
+            font-size: 19px;
+            color: #7F7F7F;
+            line-height: 23px;
+        }
     }
 }

@@ -46,26 +46,29 @@ const Question = function () {
         setList(newList)
     }
     return (
-        <div className={styles.container}>
-            <div className={styles.title}>Frequently Asked Questions</div>
-            {/*<div className={styles.gradientBtn}>Coming soon</div>*/}
-            <div className={styles.line}></div>
-            {
-                list.map((item, index) => {
-                    return (
-                        <div key={index}>
-                            <div className={styles.question} style={item.showAnswer ? null : { marginBottom: '29px' }} onClick={() => showAnswer(index)}>
-                                <img style={{width: '36px', height: '36px'}} src={item.showAnswer ? '/images/bt_shouqi.png' : '/images/bt_dakai.png'} />
-                                <div>{item.question}</div>
+        <div className={styles.questionBox}>
+            <div className={styles.container}>
+                <div className={styles.title}>Frequently Asked Questions</div>
+                {/*<div className={styles.gradientBtn}>Coming soon</div>*/}
+                <div className={styles.line}></div>
+                {
+                    list.map((item, index) => {
+                        return (
+                            <div key={index}>
+                                <div className={styles.question} style={item.showAnswer ? null : { marginBottom: '29px' }} onClick={() => showAnswer(index)}>
+                                    <img style={{width: '36px', height: '36px'}} src={item.showAnswer ? '/images/bt_shouqi.png' : '/images/bt_dakai.png'} />
+                                    <div>{item.question}</div>
+                                </div>
+                                {
+                                    item.showAnswer ? <div className={styles.answer} style={{ margin: '29px 0 47px', whiteSpace: 'pre-wrap' }}>{item.answer}</div> : null
+                                }
                             </div>
-                            {
-                                item.showAnswer ? <div className={styles.answer} style={{ margin: '29px 0 47px', whiteSpace: 'pre-wrap' }}>{item.answer}</div> : null
-                            }
-                        </div>
-                    )
-                })
-            }
+                        )
+                    })
+                }
+            </div>
         </div>
+        
     )
 };
 export default Question;

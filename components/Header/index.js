@@ -8,9 +8,9 @@ const Header = function() {
                 </div>
                 <div className={styles.right}>
                     <div onClick={() => window.location.href='https://discord.gg/crGTv3z8aH'}>Discord</div>
-                    <div onClick={() => window.location.href='https://twitter.com/Torimi_NFT'}>Twitter</div>
+                    <div onClick={() => window.location.href='https://twitter.com/LamarOdomMeta'}>Twitter</div>
                     <div>OpenSea</div>
-                    <div onClick={() => window.location.href='https://www.instagram.com/torimi_nft'}>Instagram</div>
+                    <div onClick={() => window.location.href='https://www.instagram.com/lamarodommeta'}>Instagram</div>
                     <div className={styles.gradientBtn}>
                         <img src='/images/bt_mint.png'/>
                     </div>
