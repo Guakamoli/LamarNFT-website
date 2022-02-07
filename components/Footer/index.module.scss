@@ -14,7 +14,7 @@
         }
         .right{
             display: flex;
-            .btn{
+            a{
                 cursor: pointer;
                 border-radius: 50px;
                 background:white;
@@ -26,6 +26,7 @@
                 font-size: 20px;
                 color: #6A33E2;
                 margin-left: 34px;
+                display: block;
             }
         }
     }

@@ -7,10 +7,10 @@ const Footer = function() {
                     Copyright © {new Date().getFullYear()}. All rights reserved Lamar Odom's Metaverse.
                 </div>
                 <div className={styles.right}>
-                    <div className={styles.btn} onClick={() => window.location.href='https://discord.gg/crGTv3z8aH'}>DISCORD</div>
-                    <div className={styles.btn} onClick={() => window.location.href='https://twitter.com/LamarOdomMeta'}>TWITTER</div>
-                    <div className={styles.btn}>OPENSEA</div>
-                    <div className={styles.btn} onClick={() => window.location.href='https://www.instagram.com/lamarodommeta'}>INSTAGRAM</div>
+                    <a className={styles.btn} target="_blank" href="https://discord.gg/crGTv3z8aH">DISCORD</a>
+                    <a className={styles.btn} target="_blank" href="https://twitter.com/LamarOdomMeta">TWITTER</a>
+                    <a className={styles.btn}>OPENSEA</a>
+                    <a className={styles.btn} target="_blank" href="https://www.instagram.com/lamarodommeta">INSTAGRAM</a>
                 </div>
             </div>
         </div>

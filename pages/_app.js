@@ -4,7 +4,7 @@ const MetaHead = ({ url, title, description, image, viewport, webType = "website
   
     return (
       <Head>
-        <title>Torimi NFT - Lamar Odom's Metaverse</title>
+        <title>Lamar Odom's Metaverse</title>
         <meta property="og:title"  />
         <meta property="og:description"  />
         <meta name="description" />

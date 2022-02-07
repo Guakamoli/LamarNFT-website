@@ -7,10 +7,12 @@ const Header = function() {
                     <img src='/images/logo.png' className={styles.imgStyle} />
                 </div>
                 <div className={styles.right}>
-                    <div onClick={() => window.location.href='https://discord.gg/crGTv3z8aH'}>Discord</div>
-                    <div onClick={() => window.location.href='https://twitter.com/LamarOdomMeta'}>Twitter</div>
-                    <div>OpenSea</div>
-                    <div onClick={() => window.location.href='https://www.instagram.com/lamarodommeta'}>Instagram</div>
+                    <a href="https://discord.gg/crGTv3z8aH" target="_blank">
+                        Discord
+                    </a>
+                    <a href="https://twitter.com/LamarOdomMeta" target="_blank">Twitter</a>
+                    <a>OpenSea</a>
+                    <a href="https://www.instagram.com/lamarodommeta" target="_blank">Instagram</a>
                     <div className={styles.gradientBtn}>
                         <img src='/images/bt_mint.png'/>
                     </div>
