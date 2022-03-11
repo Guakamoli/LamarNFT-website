@@ -1,0 +1,48 @@
+.contianer{
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: -400px;
+    margin-bottom: 123px;
+    .title{
+        padding-left: 120px;
+        font-size: 40px;
+        font-family: HelveticaNeue-Bold, HelveticaNeue;
+        font-weight: bold;
+        color: #FFFFFF;
+        line-height: 49px;
+        height:49px;
+        margin-bottom: 79px;
+    }
+    .list{
+        display:flex;
+        overflow-x: auto;
+        &::-webkit-scrollbar { width: 0 !important }
+        .item{
+            flex-shrink: 0;
+            background-image: url(./box.png);
+            background-repeat: no-repeat;
+            background-size:contain;
+            width: 568px;
+            height: 522px;
+            margin-right: 32px;
+            box-sizing: border-box;
+            padding:46px 52px;
+            .itemTitle{
+                font-size: 40px;
+                font-family: HelveticaNeue-Bold, HelveticaNeue;
+                font-weight: bold;
+                color: #000000;
+                line-height: 49px;
+                margin-bottom: 20px;
+            }
+            .itemContent{
+                font-size: 19px;
+                font-family: HelveticaNeue;
+                color: #7F7F7F;
+                line-height: 25px;
+                width: 473px;
+            }
+        }
+    }
+}

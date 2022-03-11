@@ -11,17 +11,18 @@
     .content{
         position: relative;
         z-index: 10;
-        padding: 52px 0 80px 50px;
+        padding: 49px 0 80px 50px;
         .title{
             color: white;
             font-size: 40px;
             font-weight: bold;
         }
         .subtitle{
-            margin-top: 17px;
+            margin-top: 15px;
+            font-family: HelveticaNeue;
             color: #7F7F7F;
             font-size: 19px;
-            width: 512px;
+            width: 513px;
             line-height: 22px;
         }
         .btn{
@@ -34,7 +35,7 @@
             font-weight: bold;
             text-align: center;
             line-height: 53px;
-            margin-top: 76px;
+            margin-top: 22px;
             cursor: pointer;
         }
     }
