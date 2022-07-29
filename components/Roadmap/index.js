@@ -9,21 +9,21 @@ const Roadmap = () => {
             <div className={styles.content}>
                 <div className={styles.red}></div>
                 <div className={styles.green}></div>
-                <div className={styles.textBottom}>Season Final</div>
+                <div className={styles.textBottom}>Phase 3 Metaverse</div>
                 <div className={styles.bottom}>
                     <img src='/images/bg_kuang_5.png'/>
                     <div className={styles.text}>
                         <div>
-                        Public Sale begins.<br/>
-25% - Giveaway of 10 LM NFTs to our community<br/>
-50% - Exclusive Lamar merchants and shoutout videos giveaway. <br/>
-75% - Community event where Lamar Odom will come and meet eveyone and talk about the next steps. New drops will also be revealed, all LM holders have access to pre-sale.  <br/>
-100% - Reveal details on the social space we are building in the metaverse. The social space based on web 3.0 is only accessible to LM holders. A home for athletes and true sports fans like you.  Holders of LM NFT get lifetime access to the social space and will have their names put on the walls. <br/>
-- Virtual basketball game with your friend in the social space arena.<br/>
-- Access members only events with a chance to meet your favorite NBA stars.  <br/>
+                        - Reveal details on the social space we are building in the metaverse. The social space based on web 3.0 is only accessible to LM holders. A home for athletes and true sports fans like you<br/>
+                        - Holders of LM NFT get lifetime access to the social space and will have their names put on the walls.<br/>
+                        - Virtual basketball game with your friend in the social space arena. <br/>
+                        - Virtual basketball game with your friend in the social space arena.<br/>
+                        - Access members only events with a chance to meet your favorite NBA stars. <br/>
 - Exclusive physical and digital merchandise for members to purchase<br/>
 - Members of Lamar Odom's Metaverse social space have a chance to earn rewards and share revenues! <br/>
 - And more!<br/>
+<br/>
+<br/>
 {"Parts of the proceeds will also be donated to the Mamba & Mambacita Sports Foundation to honor Lamar's former teamate, Kobe Bryant, and support younger athletes."}</div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@ const Roadmap = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={styles.textRight}>Episode&nbsp;1</div>
+                        <div className={styles.textRight}>Phase&nbsp;&nbsp;1&nbsp;&nbsp;Genesis</div>
                     </div>
                     <div className={`${styles.stepItem} ${styles.redRadius}`} style={{marginTop:'314px'}}>
                         <div className={styles.stepRight}>
@@ -48,9 +48,9 @@ const Roadmap = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={styles.textLeft}>Episode&nbsp;2</div>
+                        <div className={styles.textLeft}>Phase&nbsp;&nbsp;2&nbsp;&nbsp;Community</div>
                     </div>
-                    <div className={`${styles.stepItem} ${styles.greenRadius}`} style={{marginTop:'250px'}}>
+                    {/* <div className={`${styles.stepItem} ${styles.greenRadius}`} style={{marginTop:'250px'}}>
                         <div className={styles.stepLeft}>
                             <img src='/images/bg_kuang_3.png' />
                             <div className={styles.text}> 
@@ -58,8 +58,8 @@ const Roadmap = () => {
                             </div>
                         </div>
                         <div className={styles.textRight}>Episode&nbsp;3</div>
-                    </div>
-                    <div className={`${styles.stepItem} ${styles.greenRadius}`} style={{marginTop:'350px'}}>
+                    </div> */}
+                    <div className={`${styles.stepItem} ${styles.greenRadius}`} style={{marginTop:'200px'}}>
                         <div className={styles.stepRight} style={{top:'-100px'}}>
                             {/*<img src='/images/bg_kuang_4.png' style={{width: '516px'}}/>*/}
                             {/*<div className={styles.text}>

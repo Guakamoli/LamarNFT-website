@@ -32,7 +32,7 @@
         }
         .green {
             width: 12px;
-            height: 800px;
+            height: 368px;
             background: linear-gradient(180deg ,#64FFDA 0%,#64FFDA 24%, rgba(100, 255, 218, 0) 100%);
             opacity: 0.6;
         }
@@ -64,6 +64,8 @@
             color: white;
             font-weight: bold;
             color: #FFFFFF;
+            font-size: 24px;
+            margin-top: 23px;
         }
         .step {
             position: absolute;
@@ -133,7 +135,7 @@
                     position: absolute;
                     top: 0;
                     color: white;
-                    left: 66px;
+                    left: 99px;
                     font-size: 24px;
                     font-weight: bold;
                     color: #FFFFFF;
@@ -142,7 +144,7 @@
                     position: absolute;
                     top: 0;
                     color: white;
-                    left: -166px;
+                    left: -309px;
                     font-size: 24px;
                     font-weight: bold;
                     color: #FFFFFF;

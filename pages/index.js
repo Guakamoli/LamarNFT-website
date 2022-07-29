@@ -16,7 +16,7 @@ const Index = () => {
             <Swiper />
             <Introduce />
             <LMCollection />
-            <Whitelist />
+            {/* <Whitelist /> */}
             <Roadmap />
             {/*<Team />*/}
             <Question />
