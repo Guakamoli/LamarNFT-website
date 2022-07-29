@@ -26,11 +26,11 @@ const Question = function () {
     }, {
         showAnswer: false,
         question: "How many LM NFT can I buy per wallet?",
-        answer: "Currently there is no limit to the number of NFTs a wallet can purchase but that is subject to change."
+        answer: "You can mint 1 NFT per wallet."
     }, {
         showAnswer: false,
         question: "How much is it to mint a LM?",
-        answer: "Each LM is priced at 0.0777 ETH"
+        answer: "It's FREE!!!"
     }, {
         showAnswer: false,
         question: "How long after minting will my NFT be available?",
