@@ -1,0 +1,3 @@
+[submodule "LamarNFT-contract"]
+	path = LamarNFT-contract
+	url = git@github.com:Guakamoli/LamarNFT-contract.git
