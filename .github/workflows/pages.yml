@@ -31,6 +31,9 @@ jobs:
       - name: Set Deploy Key
         id: set-deploy-key
         run: |
+          if [ ! -d "$HOME/.ssh" ]; then
+            mkdir $HOME/.ssh
+          fi
           echo "${{ secrets.LAMARNFT_WEBSITE_DEPLOY_KEY }}" > $HOME/.ssh/id_rsa
       - name: Checkout
         uses: actions/checkout@v3
