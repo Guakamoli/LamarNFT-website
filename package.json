@@ -4,7 +4,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "build:docs": "npx next build && npx next export -o docs && cp ./copyFile/CNAME ./copyFile/.nojekyll ./docs"
+    "export": "next export",
+    "build:docs": "npx next build && npx next export -o docs"
   },
   "dependencies": {
     "next": "latest",
