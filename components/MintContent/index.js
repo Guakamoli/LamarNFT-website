@@ -1,5 +1,12 @@
 import styles from './index.module.scss'
-export default function MintContent(){
+export default function MintContent(props){
+    const {
+        loading,
+        decrementMintAmount,
+        incrementMintAmount,
+        mintAmount,
+        mint,
+    } = props;
     return (
         <div className={styles.container}>
             <img src='/images/productImg.png' style={{width:'624px'}}/>
@@ -10,16 +17,16 @@ export default function MintContent(){
                     <div className={styles.right}>0 of 7,777</div>
                 </div>
                 <div className={styles.row} style={{padding: '21px 0'}}>
-                    <div className={styles.left}>Amount</div>
+                    <div className={styles.left}>mintAmount</div>
                     <div className={styles.right}>
                         <div className={styles.num}>
-                            <div className={styles.operateBtn}>-</div>
+                            <div className={styles.operateBtn} onClick={decrementMintAmount}>-</div>
                             <div style={{
                                 color:'#68F9DC',
                                 fontSize:'32px',
                                 margin: '0 37px'
-                            }}>1</div>
-                            <div className={styles.operateBtn}>+</div>
+                            }}>{mintAmount}</div>
+                            <div className={styles.operateBtn} onClick={incrementMintAmount}>+</div>
                         </div>
                         <div className={styles.gradientBtn}></div>
                     </div>
@@ -28,7 +35,7 @@ export default function MintContent(){
                     <div className={styles.left}>Total amount</div>
                     <div className={styles.right}>0.0777 ETH</div>
                 </div>
-                <div className={styles.btn}>Coming soon</div>
+                <div className={styles.btn} onClick={mint}>MINT NOW</div>
             </div>
         </div>
     )
