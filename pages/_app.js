@@ -1,5 +1,7 @@
 import "../styles/global.css";
 import Head from "next/head";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const MetaHead = ({ url, title, description, image, viewport, webType = "website", addon = null, children = null }) => {
   
     return (
@@ -19,6 +21,12 @@ function MyApp({ Component, pageProps }) {
     return (
         <>
             <MetaHead />
+            <ToastContainer
+              position='top-left'
+              autoClose={5000}
+              closeOnClick={true}
+              pauseOnHover={true}
+              theme='light' />
             <Component {...pageProps} />
         </>
     )
