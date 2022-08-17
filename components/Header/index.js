@@ -14,7 +14,7 @@ const Header = function(props) {
         <div className={styles.header}>
             <div className={styles.headerContent}>
                 <div className={styles.left}>
-                    <img src='/images/logo.png' className={styles.imgStyle} />
+                    <img src='/images/logo.png' className={styles.imgStyle} onClick={props.goHome} />
                 </div>
                 <div className={styles.right}>
                     <a href="https://discord.gg/crGTv3z8aH" target="_blank">

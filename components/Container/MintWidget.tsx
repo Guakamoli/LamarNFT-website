@@ -1,6 +1,7 @@
 import { utils, BigNumber } from 'ethers';
 import React from 'react';
 import NetworkConfigInterface from '../../LamarNFT-contract/lib/NetworkConfigInterface';
+import MintContent from '../MintContent';
 
 interface Props {
   networkConfig: NetworkConfigInterface;
@@ -14,6 +15,8 @@ interface Props {
   isUserInWhitelist: boolean;
   mintTokens(mintAmount: number): Promise<void>;
   whitelistMintTokens(mintAmount: number): Promise<void>;
+  isSoldOut(): boolean;
+  isWalletConnected(): boolean;
 }
 
 interface State {
@@ -45,6 +48,12 @@ export default class MintWidget extends React.Component<Props, State> {
     });
   }
 
+  private incrementMaxMintAmount(): void {
+    this.setState({
+      mintAmount: this.props.maxMintAmountPerTx,
+    });
+  }
+
   private decrementMintAmount(): void {
     this.setState({
       mintAmount: Math.max(1, this.state.mintAmount - 1),
@@ -61,26 +70,47 @@ export default class MintWidget extends React.Component<Props, State> {
     await this.props.whitelistMintTokens(this.state.mintAmount);
   }
 
+  private isSaleOpen(): boolean
+  {
+    return (this.props.isWhitelistMintEnabled || !this.props.isPaused) && !this.props.isSoldOut();
+  }
+
   render() {
     return (
       <>
         {this.canMint() ?
-          <div className={`mint-widget ${this.props.loading ? 'animate-pulse saturate-0 pointer-events-none' : ''}`}>
-            <div className="preview">
-              <img src="/build/images/preview.png" alt="Collection preview" />
-            </div>
+             <MintContent
+              loading={this.props.loading}
+              tokenPrice={this.props.tokenPrice}
+              networkConfig={this.props.networkConfig}
+              maxSupply={this.props.maxSupply}
+              totalSupply={this.props.totalSupply}
+              maxMintAmountPerTx={this.props.maxMintAmountPerTx}
+              isWhitelistMintEnabled={this.props.isWhitelistMintEnabled}
+              isSaleOpen={() => this.isSaleOpen()}
+              decrementMintAmount={() => this.decrementMintAmount()}
+              incrementMintAmount={() => this.incrementMintAmount()}
+              incrementMaxMintAmount={() => this.incrementMaxMintAmount()}
+              mintAmount={this.state.mintAmount}
+              mint={() => this.mint()}
+              isWalletConnected={this.props.isWalletConnected}
+             />
+          // <div className={`mint-widget ${this.props.loading ? 'animate-pulse saturate-0 pointer-events-none' : ''}`}>
+          //   <div className="preview">
+          //     <img src="/build/images/preview.png" alt="Collection preview" />
+          //   </div>
 
-            <div className="price">
-              <strong>Total price:</strong> {utils.formatEther(this.props.tokenPrice.mul(this.state.mintAmount))} {this.props.networkConfig.symbol}
-            </div>
+          //   <div className="price">
+          //     <strong>Total price:</strong> {utils.formatEther(this.props.tokenPrice.mul(this.state.mintAmount))} {this.props.networkConfig.symbol}
+          //   </div>
 
-            <div className="controls">
-              <button className="decrease" disabled={this.props.loading} onClick={() => this.decrementMintAmount()}>-</button>
-              <span className="mint-amount">{this.state.mintAmount}</span>
-              <button className="increase" disabled={this.props.loading} onClick={() => this.incrementMintAmount()}>+</button>
-              <button className="primary" disabled={this.props.loading} onClick={() => this.mint()}>Mint</button>
-            </div>
-          </div>
+          //   <div className="controls">
+          //     <button className="decrease" disabled={this.props.loading} onClick={() => this.decrementMintAmount()}>-</button>
+          //     <span className="mint-amount">{this.state.mintAmount}</span>
+          //     <button className="increase" disabled={this.props.loading} onClick={() => this.incrementMintAmount()}>+</button>
+          //     <button className="primary" disabled={this.props.loading} onClick={() => this.mint()}>Mint</button>
+          //   </div>
+          // </div>
           :
           <div className="cannot-mint">
             <span className="emoji">⏳</span>
