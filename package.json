@@ -10,6 +10,7 @@
     "@coinbase/wallet-sdk": "^3.4.2",
     "@ethersproject/providers": "^5.6.2",
     "@metamask/detect-provider": "^1.2.0",
+    "@walletconnect/web3-provider": "^1.8.0",
     "ethers": "^5.5.3",
     "keccak256": "^1.0.6",
     "merkletreejs": "^0.2.32",
@@ -17,7 +18,8 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-toastify": "^9.0.8",
-    "sass": "^1.35.1"
+    "sass": "^1.35.1",
+    "web3modal": "^1.9.8"
   },
   "devDependencies": {
     "@types/react": "^18.0.17"
