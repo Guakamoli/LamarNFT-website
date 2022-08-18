@@ -82,7 +82,7 @@ class Dapp extends React.Component<Props, State> {
       });
     });
 
-    if(this.props.provider && this.pathname === '/mint') {
+    if(this.props.provider) {
       await this.initWallet({
         afterCallback,
       });
@@ -352,7 +352,6 @@ class Dapp extends React.Component<Props, State> {
 
     if (await library.getCode(CollectionConfig.contractAddress!) === '0x') {
       this.setError('Could not find the contract, are you connected to the right chain?');
-
       return;
     }
 
