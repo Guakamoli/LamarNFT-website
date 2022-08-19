@@ -35,6 +35,7 @@ jobs:
             mkdir $HOME/.ssh
           fi
           echo "${{ secrets.LAMARNFT_WEBSITE_DEPLOY_KEY }}" > $HOME/.ssh/id_rsa
+          chmod 600 $HOME/.ssh/id_rsa
       - name: Checkout
         uses: actions/checkout@v3
       - name: Detect package manager
@@ -80,6 +81,13 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: Contract Compile
+        id: contract-compile
+        run: |
+          git submodule status;
+          git submodule update --init LamarNFT-contract;
+          cd LamarNFT-contract && yarn install && yarn compile;
+          sed -i 's/some_contract_address/${{ secrets.LAMARNFT_CONTRACT_ADDRESS }}/g' ./config/CollectionConfig.ts
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Static HTML export with Next.js
