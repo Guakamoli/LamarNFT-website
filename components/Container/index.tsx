@@ -336,15 +336,21 @@ class Dapp extends React.Component<Props, State> {
 
     let networkConfig: NetworkConfigInterface;
 
-    console.info(network.chainId, CollectionConfig.testnet.chainId, CollectionConfig.mainnet.chainId, '------initWallet-------');
     if (network.chainId === CollectionConfig.mainnet.chainId) {
       networkConfig = CollectionConfig.mainnet;
     } else if (network.chainId === CollectionConfig.testnet.chainId) {
       networkConfig = CollectionConfig.testnet;
     } else {
-      console.info('Unsupported network!');
       this.setError('Unsupported network!');
-
+      toast.error('Unsupported network!', {
+        position: "top-left",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
       return;
     }
 
