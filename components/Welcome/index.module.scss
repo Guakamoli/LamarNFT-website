@@ -10,8 +10,12 @@
     }
     .content{
         position: relative;
-        z-index: 10;
+        // z-index: 10;
         padding: 49px 0 80px 50px;
+        .network{
+            color: red;
+           padding-top: 10px;
+        }
         .title{
             color: white;
             font-size: 40px;

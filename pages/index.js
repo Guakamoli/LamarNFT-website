@@ -1,27 +1,21 @@
-import Header from '../components/Header';
-import Welcome from '../components/Welcome';
-import Introduce from '../components/Introduce';
-import Team from '../components/Team';
-import Footer from '../components/Footer';
-import Roadmap from '../components/Roadmap';
-import Question from '../components/Question';
-import Swiper from '../components/Swiper';
-import LMCollection from '../components/LMCollection'
-import Whitelist from '../components/Whitelist';
-const Index = () => {
-    return (
-        <div style={{background: '#000000'}}>
-            <Header />
-            <Welcome />
-            <Swiper />
-            <Introduce />
-            <LMCollection />
-            {/* <Whitelist /> */}
-            <Roadmap />
-            {/*<Team />*/}
-            <Question />
-            <Footer />
-        </div>
-    )
-};
-export default Index;
+import Container from "../components/Container/index.tsx";
+import Swiper from "../components/Swiper";
+import Introduce from "../components/Introduce";
+import LMCollection from "../components/LMCollection";
+import Roadmap from "../components/Roadmap";
+import Question from "../components/Question";
+import Welcome from "../components/Welcome";
+import Footer from "../components/Footer";
+
+export default function (props) {
+  return (
+    <Container {...props}>
+      <Swiper />
+      <Introduce />
+      <LMCollection />
+      <Roadmap />
+      <Question />
+      <Footer />
+    </Container>
+  );
+}
