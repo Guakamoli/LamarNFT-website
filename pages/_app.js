@@ -96,6 +96,11 @@ function MyApp({ Component, pageProps }) {
     return false;
   };
 
+  const disconnect = async () => {
+    await web3Modal.clearCachedProvider();
+    callbacks.run("initWallet", accounts[0]);
+  };
+
   useEffect(() => {
     if (provider?.on) {
       const handleAccountsChanged = async (accounts) => {
@@ -110,12 +115,13 @@ function MyApp({ Component, pageProps }) {
       };
 
       const handleChainChanged = (_hexChainId) => {
+        console.info(_hexChainId, "-------_hexChainId----");
         window.location.reload();
       };
 
       const handleDisconnect = async () => {
         console.log("disconnect", error);
-        // disconnect();
+        disconnect();
         await web3Modal.clearCachedProvider();
       };
 

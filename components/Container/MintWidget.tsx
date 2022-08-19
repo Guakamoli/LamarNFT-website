@@ -43,24 +43,28 @@ export default class MintWidget extends React.Component<Props, State> {
   }
 
   private incrementMintAmount(): void {
+    if (this.props.loading) { return; }
     this.setState({
       mintAmount: Math.min(this.props.maxMintAmountPerTx, this.state.mintAmount + 1),
     });
   }
 
   private incrementMaxMintAmount(): void {
+    if (this.props.loading) { return; }
     this.setState({
       mintAmount: this.props.maxMintAmountPerTx,
     });
   }
 
   private decrementMintAmount(): void {
+    if (this.props.loading) { return; }
     this.setState({
       mintAmount: Math.max(1, this.state.mintAmount - 1),
     });
   }
 
   private async mint(): Promise<void> {
+    if (this.props.loading) { return; }
     if (!this.props.isPaused) {
       await this.props.mintTokens(this.state.mintAmount);
 

@@ -204,9 +204,11 @@ class Dapp extends React.Component<Props, State> {
               isWalletConnected={() => this.isWalletConnected()}
               connectWallet={() => this.connectWallet()}
               isSoldOut={() => this.isSoldOut()}
+              isNotMainnet={() => this.isNotMainnet()}
               isPaused={this.state.isPaused}
               isWhitelistMintEnabled={this.state.isWhitelistMintEnabled}
               isUserInWhitelist={this.state.isUserInWhitelist}
+              networkName={this.state.network?.name}
             />
           ) : (
                 <div style={{ width: '100%', height:'100vh', display: 'flex', alignItems: 'center', }}>
@@ -334,11 +336,13 @@ class Dapp extends React.Component<Props, State> {
 
     let networkConfig: NetworkConfigInterface;
 
+    console.info(network.chainId, CollectionConfig.testnet.chainId, CollectionConfig.mainnet.chainId, '------initWallet-------');
     if (network.chainId === CollectionConfig.mainnet.chainId) {
       networkConfig = CollectionConfig.mainnet;
     } else if (network.chainId === CollectionConfig.testnet.chainId) {
       networkConfig = CollectionConfig.testnet;
     } else {
+      console.info('Unsupported network!');
       this.setError('Unsupported network!');
 
       return;

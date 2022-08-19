@@ -14,6 +14,8 @@ const Welcome = (props) => {
     isUserInWhitelist,
     isSoldOut,
     generateMarketplaceUrl,
+    networkName,
+    isNotMainnet,
   } = props;
   const walletConnected = isWalletConnected();
   const soldOut = isSoldOut();
@@ -54,7 +56,7 @@ const Welcome = (props) => {
     if (canMint()) {
       return (
         <div className={styles.btn} onClick={handleMintPage}>
-          MINT NOW
+          Next sale
         </div>
       );
     }
@@ -85,6 +87,14 @@ const Welcome = (props) => {
           </div>
         )}
         {renderPurchase()}
+        {isNotMainnet() ? (
+          <div className={styles.network}>
+            You are not connected to the main network.
+            <span>
+              Current network: <strong>{networkName}</strong>
+            </span>
+          </div>
+        ) : null}
       </div>
     </div>
   );
