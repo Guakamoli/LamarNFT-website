@@ -6,7 +6,6 @@ import { ethers } from "ethers";
 
 import Web3Modal from "web3modal";
 import CoinbaseWalletSDK from "@coinbase/wallet-sdk";
-import WalletConnect from "@walletconnect/web3-provider";
 import React, { useState, useEffect } from "react";
 import { callbacks } from "../libs/callbacks.ts";
 import { useRouter } from "next/router";
