@@ -29,10 +29,32 @@
             width: 513px;
             line-height: 22px;
         }
-        .btn{
+        .soldout{
             width: 164px;
             height: 53px;
+            // background: #64FFDA;
+            // background: rgb(55, 101, 91);
+            border-radius: 32px;
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            line-height: 53px;
+            margin-top: 22px;
+            cursor: pointer;
+            border: 0
+        }
+        .soldout{
+            width: 164px;
+            background: rgb(55, 101, 91);
+        }
+        normalbtn{
+            width: 264px;
+            height: 53px;
             background: #64FFDA;
+        }
+        .btn{
+            height: 53px;
             border-radius: 32px;
             font-size: 18px;
             color: black;

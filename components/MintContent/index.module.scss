@@ -68,10 +68,16 @@
             }
            
         }
-        .btn{
+        .soldout{
             width: 400px;
-            height: 53px;
+            background: rgb(55, 101, 91);
+        }
+        .normalbtn{
+            width: 400px;
             background: #64FFDA;
+        }
+        .btn{
+            height: 53px;
             border-radius: 32px;
             font-size: 18px;
             color: black;
@@ -80,6 +86,7 @@
             line-height: 53px;
             margin-top: 59px;
             cursor: pointer;
+            border: 0;
         }
     }
 

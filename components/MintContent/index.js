@@ -12,7 +12,9 @@ export default function MintContent(props) {
     incrementMaxMintAmount,
     isWhitelistMintEnabled,
     isSaleOpen,
+    isSoldOut: isSoldOutFunc,
   } = props;
+  const isSoldOut = isSoldOutFunc();
 
   return (
     <div className={styles.container}>
@@ -70,9 +72,15 @@ export default function MintContent(props) {
             {props.networkConfig.symbol}
           </div>
         </div>
-        <div className={styles.btn} onClick={mint}>
+        <button
+          className={`${styles.btn} ${
+            isSoldOut ? styles.soldout : styles.normalbtn
+          }`}
+          disabled={isSoldOut}
+          onClick={mint}
+        >
           MINT NOW
-        </div>
+        </button>
       </div>
     </div>
   );
