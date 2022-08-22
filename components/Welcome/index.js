@@ -41,21 +41,21 @@ const Welcome = (props) => {
   const renderPurchase = () => {
     if (soldOut) {
       return (
-        <div>
-          <h2>
-            Tokens have been <strong>sold out</strong>! <span>🥳</span>
-          </h2>
-          You can buy from our beloved holders on{" "}
-          <a href={generateMarketplaceUrl()} target="_blank">
-            {CollectionConfig.marketplaceConfig.name}
-          </a>
-          .
-        </div>
+        <button
+          disabled={true}
+          className={`${styles.btn} ${styles.soldout}`}
+          onClick={handleMintPage}
+        >
+          Sold out
+        </button>
       );
     }
     if (canMint()) {
       return (
-        <div className={styles.btn} onClick={handleMintPage}>
+        <div
+          className={`${styles.btn} ${styles.normalbtn}`}
+          onClick={handleMintPage}
+        >
           Next sale
         </div>
       );
@@ -83,7 +83,7 @@ const Welcome = (props) => {
         </div>
         {walletConnected ? null : (
           <div className={styles.btn} onClick={handleConnectWallet}>
-            Coming soon
+            Connect your wallet
           </div>
         )}
         {renderPurchase()}

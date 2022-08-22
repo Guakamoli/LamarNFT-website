@@ -212,12 +212,6 @@ class Dapp extends React.Component<Props, State> {
             />
           ) : (
                 <div style={{ width: '100%', height:'100vh', display: 'flex', alignItems: 'center', }}>
-                  {this.isSoldOut() && (<div className="collection-sold-out">
-                        <h2>Tokens have been <strong>sold out</strong>! <span className="emoji">🥳</span></h2>
-
-                        You can buy from our beloved holders on <a href={this.generateMarketplaceUrl()} target="_blank">{CollectionConfig.marketplaceConfig.name}</a>.
-                      </div>)}
-                  { (!this.isSoldOut() && !this.state.isPaused) &&
                       <MintWidget
                         isWalletConnected={() => this.isWalletConnected()}
                         networkConfig={this.state.networkConfig}
@@ -233,7 +227,6 @@ class Dapp extends React.Component<Props, State> {
                         loading={this.state.loading}
                         isSoldOut={() => this.isSoldOut()}
                       />
-                  }
               </div>
             )
           }
