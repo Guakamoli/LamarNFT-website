@@ -48,7 +48,7 @@
             width: 164px;
             background: rgb(55, 101, 91);
         }
-        normalbtn{
+        .normalbtn{
             width: 264px;
             height: 53px;
             background: #64FFDA;
@@ -63,6 +63,7 @@
             line-height: 53px;
             margin-top: 22px;
             cursor: pointer;
+            border: 0;
         }
     }
 }

@@ -82,9 +82,12 @@ const Welcome = (props) => {
           a loving and supporting community. One love!" - Lamar Odom
         </div>
         {walletConnected ? null : (
-          <div className={styles.btn} onClick={handleConnectWallet}>
+          <button
+            className={`${styles.btn} ${styles.normalbtn}`}
+            onClick={handleConnectWallet}
+          >
             Connect your wallet
-          </div>
+          </button>
         )}
         {renderPurchase()}
         {isNotMainnet() ? (
