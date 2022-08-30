@@ -24,7 +24,7 @@ export default function MintContent(props) {
           Make sure to connect your Wallet before purchasing
         </div>
         <div className={styles.row}>
-          <div className={styles.left}>Total sold</div>
+          <div className={styles.left}>Sale Status</div>
           <div className={styles.right}>
             {isSaleOpen() ? (
               <>{isWhitelistMintEnabled ? "Whitelist only" : "Open"}</>
